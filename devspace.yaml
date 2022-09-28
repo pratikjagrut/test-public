@@ -1,0 +1,12 @@
+version: v2beta1
+name: dep
+
+pipelines:
+  my-pipe: |-
+    echo $(is_true true)
+    echo $?
+    if is_os darwin; then
+      echo "yes"
+    else
+      echo "No"
+    fi
